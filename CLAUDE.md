@@ -91,7 +91,7 @@ main:  scaffold ──→ M01 complete ──→ M02 complete ──→ M03 comp
 ## Current Module
 **Module:** Module 03 — Page Object Model
 **Branch:** `module-03-page-object-model`
-**Status:** In progress
+**Status:** Complete
 **Next:** Module 04 — Writing Tests
 
 ---
