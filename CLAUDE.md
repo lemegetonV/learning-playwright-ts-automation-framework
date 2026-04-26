@@ -91,7 +91,7 @@ main:  scaffold ──→ M01 complete ──→ M02 complete ──→ M03 comp
 ## Current Module
 **Module:** Module 06 — Reporting & CI/CD
 **Branch:** `module-06-reporting-cicd`
-**Status:** In progress
+**Status:** Complete
 **Next:** Module 07 — Capstone: Real World Project
 
 ---
