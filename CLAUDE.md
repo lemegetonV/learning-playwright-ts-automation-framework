@@ -89,10 +89,10 @@ main:  scaffold ──→ M01 complete ──→ M02 complete ──→ M03 comp
 - **Plan changes?** → `../../CHANGELOG.md`
 
 ## Current Module
-**Module:** Module 04 — Writing Tests
-**Branch:** `module-04-writing-tests`
-**Status:** Complete
-**Next:** Module 05 — Advanced Features
+**Module:** Module 05 — Advanced Features
+**Branch:** `module-05-advanced-features`
+**Status:** In progress
+**Next:** Module 06 — Reporting & CI/CD
 
 ---
 
