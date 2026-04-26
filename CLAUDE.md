@@ -91,7 +91,7 @@ main:  scaffold ──→ M01 complete ──→ M02 complete ──→ M03 comp
 ## Current Module
 **Module:** Module 01 — Getting Started with Playwright
 **Branch:** `module-01-getting-started`
-**Status:** In progress
+**Status:** Complete
 **Next:** Module 02 — Framework Foundation
 
 ---
