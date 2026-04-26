@@ -27,16 +27,16 @@ flowchart LR
 
 ```ts
 [
-  'allure-playwright',
-  {
-    detail: true,
-    outputFolder: 'reports/allure-results',
-    suiteTitle: true,
-  },
+    'allure-playwright',
+    {
+      detail: true,
+      resultsDir: 'reports/allure-results',
+      suiteTitle: true,
+    },
 ]
 ```
 
-The important option is `outputFolder`, because it keeps generated files under the ignored `reports/` tree.
+The important option is `resultsDir`, because it keeps generated files under the ignored `reports/` tree.
 
 ## Allure Scripts
 
@@ -44,10 +44,11 @@ The important option is `outputFolder`, because it keeps generated files under t
 
 ```json
 {
-  "test:allure": "playwright test --project=reporting-chromium --reporter=allure-playwright",
+  "test:allure": "playwright test --project=reporting-chromium",
   "allure:generate": "allure generate reports/allure-results --clean -o reports/allure-report",
   "allure:open": "allure open reports/allure-report",
-  "allure:serve": "allure serve reports/allure-results"
+  "allure:serve": "allure serve reports/allure-results",
+  "test:summary": "playwright test --project=reporting-chromium --reporter=./reporters/console-summary-reporter.ts"
 }
 ```
 
@@ -91,6 +92,14 @@ onTestEnd(test, result) {
 ```
 
 This repo's custom reporter is deliberately small. It teaches the extension point without replacing Playwright's built-in reporters.
+
+Run it directly:
+
+```bash
+npm run test:summary
+```
+
+The custom reporter is intentionally not part of the default configured reporter list because it prints one line per test. Keeping it as a script makes the concept available without making every full-suite run noisier.
 
 ## When To Avoid Custom Reporters
 

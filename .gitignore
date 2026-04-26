@@ -8,6 +8,9 @@ reports/*
 !reports/.gitkeep
 test-results/
 playwright-report/
+blob-report/
+allure-results/
+allure-report/
 playwright/.auth/*
 !playwright/.auth/.gitkeep
 

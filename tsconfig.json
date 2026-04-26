@@ -10,6 +10,6 @@
     "skipLibCheck": true,
     "types": ["node", "@playwright/test"]
   },
-  "include": ["playwright.config.ts", "tests/**/*.ts", "src/**/*.ts"],
+  "include": ["playwright.config.ts", "tests/**/*.ts", "src/**/*.ts", "reporters/**/*.ts"],
   "exclude": ["node_modules", "reports", "test-results"]
 }

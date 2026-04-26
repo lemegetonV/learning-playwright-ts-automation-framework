@@ -1,0 +1,61 @@
+name: Playwright Tests
+
+on:
+  push:
+    branches:
+      - main
+      - 'module-*'
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  test:
+    name: Playwright test suite
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+
+    env:
+      BASE_URL: https://www.saucedemo.com
+      SAUCEDEMO_STANDARD_USER: standard_user
+      SAUCEDEMO_LOCKED_USER: locked_out_user
+      SAUCEDEMO_PROBLEM_USER: problem_user
+      SAUCEDEMO_PERFORMANCE_USER: performance_glitch_user
+      SAUCEDEMO_ERROR_USER: error_user
+      SAUCEDEMO_VISUAL_USER: visual_user
+      SAUCEDEMO_PASSWORD: secret_sauce
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Install Playwright browsers
+        run: npx playwright install --with-deps
+
+      - name: Type-check TypeScript
+        run: npm run typecheck
+
+      - name: Run Playwright tests
+        run: npm run test:ci
+
+      - name: Upload Playwright reports and artifacts
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: playwright-reports
+          if-no-files-found: ignore
+          retention-days: 14
+          path: |
+            reports/playwright-html
+            reports/test-results
+            reports/allure-results
+            reports/test-artifacts

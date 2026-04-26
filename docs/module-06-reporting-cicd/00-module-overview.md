@@ -34,8 +34,8 @@ flowchart TD
 
 | File | Status | Purpose |
 |---|---|---|
-| `playwright.config.ts` | changed | Adds JSON, JUnit, Allure, and custom summary reporters; adds a reporting project |
-| `package.json` | changed | Adds Allure/reporting/CI scripts and dev dependencies |
+| `playwright.config.ts` | changed | Adds JSON, JUnit, Allure reporters and a reporting project |
+| `package.json` | changed | Adds Allure/reporting/CI/custom-summary scripts and dev dependencies |
 | `.gitignore` | changed | Ignores generated report folders and CI artifacts |
 | `reporters/console-summary-reporter.ts` | added | Demonstrates a small custom reporter |
 | `tests/reporting/artifact-capture.spec.ts` | added | Demonstrates manual screenshot attachment and report artifact output |
@@ -53,7 +53,7 @@ Module 06 uses multiple reporting layers because each layer serves a different a
 | JSON report | `reports/test-results/results.json` | tools/scripts that parse structured results |
 | JUnit report | `reports/test-results/junit.xml` | CI systems that understand test result XML |
 | Allure results | `reports/allure-results` | richer historical/interactive reporting |
-| Custom reporter | console summary | learning how reporters hook into Playwright |
+| Custom reporter script | console summary | learning how reporters hook into Playwright without making every run noisy |
 | Artifacts | `reports/test-artifacts` | screenshots, videos, traces, downloads, attachments |
 
 ## Why Reports Are Not Committed

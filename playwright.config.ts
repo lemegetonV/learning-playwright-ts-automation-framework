@@ -8,6 +8,7 @@ const browserProjectIgnore = [
   /tests\/advanced\//,
   /tests\/setup\//,
   /tests\/ui\/authenticated\//,
+  /tests\/reporting\//,
 ];
 
 export default defineConfig({
@@ -24,6 +25,16 @@ export default defineConfig({
   reporter: [
     ['list'],
     ['html', { outputFolder: 'reports/playwright-html', open: 'never' }],
+    ['json', { outputFile: 'reports/test-results/results.json' }],
+    ['junit', { outputFile: 'reports/test-results/junit.xml' }],
+    [
+      'allure-playwright',
+      {
+        detail: true,
+        resultsDir: 'reports/allure-results',
+        suiteTitle: true,
+      },
+    ],
   ],
   use: {
     baseURL,
@@ -63,6 +74,11 @@ export default defineConfig({
     {
       name: 'advanced-chromium',
       testMatch: /tests\/advanced\/.*\.spec\.ts/,
+      use: { ...devices['Desktop Chrome'] },
+    },
+    {
+      name: 'reporting-chromium',
+      testMatch: /tests\/reporting\/.*\.spec\.ts/,
       use: { ...devices['Desktop Chrome'] },
     },
     {
