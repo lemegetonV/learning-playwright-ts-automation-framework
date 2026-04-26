@@ -91,7 +91,7 @@ main:  scaffold ──→ M01 complete ──→ M02 complete ──→ M03 comp
 ## Current Module
 **Module:** Module 08 — Portfolio & Interview Packaging
 **Branch:** `module-08-portfolio-and-interview-packaging`
-**Status:** In progress
+**Status:** Complete
 **Next:** Course complete
 
 ---
