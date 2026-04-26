@@ -89,10 +89,10 @@ main:  scaffold ──→ M01 complete ──→ M02 complete ──→ M03 comp
 - **Plan changes?** → `../../CHANGELOG.md`
 
 ## Current Module
-**Module:** Module 07 — Capstone: Real World Project
-**Branch:** `module-07-capstone`
-**Status:** Complete
-**Next:** Module 08 — Portfolio & Interview Packaging
+**Module:** Module 08 — Portfolio & Interview Packaging
+**Branch:** `module-08-portfolio-and-interview-packaging`
+**Status:** Not started
+**Next:** Course complete
 
 ---
 
