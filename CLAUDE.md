@@ -59,17 +59,19 @@ A production-grade Playwright automation framework built incrementally across 8 
 
 ### Branch Model
 ```
-main:  scaffold ──→ M01 merged ──→ M02 merged ──→ M03 merged ──→ ...
-         │              │              │
-         └─ M01 branch  └─ M02 branch └─ M03 branch
+main:  scaffold ──→ M01 complete ──→ M02 complete ──→ M03 complete ──→ ...
+         │               │               │
+         └─ M01 branch   └─ M02 branch   └─ M03 branch
 ```
 
 ### Invariants (must ALWAYS be true)
-- **`main` is always a completed checkpoint** — it only contains finished, verified module work
-- **Each module branch is created from `main`** — after the previous module is merged
+- **`main` is always a completed checkpoint** — it points to the latest finished module and should match the latest `module-XX-complete` tag
+- **Each module branch is created from `main`** — after the previous module checkpoint exists
+- **All progress updates happen on the module branch** — the "Current Module" section is changed on the branch that is being worked on, not on `main`
+- **The final commit on a module branch marks that module complete** — `main` should advance to that exact commit
 - **A module branch is never reused** — once merged, it stays as a historical reference
 - **Modules are linear** — you cannot start Module N+1 until Module N is merged to `main`
-- **No direct commits to `main`** except CLAUDE.md/AGENTS.md progress updates after a merge
+- **No standalone commits go directly to `main`** — `main` only moves when a completed module branch is merged or fast-forwarded into it
 
 ### Branch Naming
 `module-XX-name` — for example:
@@ -78,19 +80,26 @@ main:  scaffold ──→ M01 merged ──→ M02 merged ──→ M03 merged �
 - `module-03-page-object-model`
 
 ## Progress Tracking
-**This file is the single source of truth for current progress.** There are no checklists or checkboxes elsewhere.
-- **What's done?** → `git log --oneline main`
-- **What's current?** → "Current Module" section below
+**This file is the source of truth for the branch you are on.** There are no checklists or checkboxes elsewhere.
+- On `main`, the "Current Module" section describes the last completed checkpoint
+- On a module branch, the "Current Module" section describes the module currently being worked on
+- **What's done?** → `git log --oneline main` and `git tag`
+- **What's current?** → the active branch name plus the "Current Module" section below
 - **What's next?** → "Next" field below
 - **Plan changes?** → `../../CHANGELOG.md`
 
 ## Current Module
 **Module:** Module 01 — Getting Started with Playwright
 **Branch:** `module-01-getting-started`
-**Status:** Not started
+**Status:** In progress
 **Next:** Module 02 — Framework Foundation
 
 ---
+
+## Current Module Semantics
+- **`Status: Not started`** — the branch exists and its progress metadata is set, but module docs/code work has not begun
+- **`Status: In progress`** — the module is actively being built on that branch
+- **`Status: Complete`** — the module branch has passed its quality gate and is ready to be merged, or has already been merged, as the completed checkpoint
 
 ## Module Map
 1. **Getting Started with Playwright** — Node.js, Playwright install, VS Code, first test, debugging basics, JavaScript/TypeScript bridge for beginners
@@ -105,11 +114,12 @@ main:  scaffold ──→ M01 merged ──→ M02 merged ──→ M03 merged �
 ## Module Lifecycle (MUST FOLLOW)
 
 ### Starting a Module
-1. Ensure you're on `main` and it reflects the last completed checkpoint
+1. Ensure you're on `main` and it reflects the last completed checkpoint tag
 2. Create branch: `git checkout -b module-XX-name`
-3. Update the "Current Module" section above with module name, branch, status, and next module
+3. On the new branch, update the "Current Module" section above with the new module name, branch, status, and next module
 4. Mirror: `cp CLAUDE.md AGENTS.md`
 5. Commit this update as the first commit on the branch
+6. Do not update `main` to preview the next module; that progress update belongs only on the new branch
 
 ### Working on a Module
 1. **Concept Docs** — Read the relevant knowledge base doc and write docs in `docs/module-XX-name/`
@@ -157,13 +167,15 @@ These docs should be detailed enough that the user can learn from the project do
    - Exercises exist with hints
    - Tests pass for the module's scope
    - Docs reference actual code locations where applicable
-3. Switch to `main` and merge: `git checkout main && git merge module-XX-name`
-4. Tag the checkpoint: `git tag module-XX-complete`
-5. Update the "Current Module" section above for the next module
-6. Mirror: `cp CLAUDE.md AGENTS.md`
-7. Commit the CLAUDE.md/AGENTS.md update on `main`
-8. Create the next branch: `git checkout -b module-XX-next-name`
-9. If any plan-level changes were made, log them in `../../CHANGELOG.md`
+3. On the module branch, update the "Current Module" section so the same module is marked `Complete`
+4. Mirror: `cp CLAUDE.md AGENTS.md`
+5. Commit that metadata update as the final commit on the module branch
+6. Switch to `main` and advance it to the completed module commit: `git checkout main && git merge --ff-only module-XX-name`
+7. Tag the exact checkpoint: `git tag module-XX-complete`
+8. Leave `main` unchanged after tagging; it should remain an exact completed checkpoint
+9. Create the next branch from `main`: `git checkout -b module-XX-next-name`
+10. On the new branch, update the "Current Module" section for the next module, mirror it, and commit it as the first commit on that branch
+11. If any plan-level changes were made, log them in `../../CHANGELOG.md`
 
 ## Checkpoint Tags
 - **Format:** `module-XX-complete`
@@ -226,6 +238,7 @@ git log --oneline --all --graph
 9. The user wants to LEARN, not just have code generated — always explain
 10. Do not follow the course's "practice project first, fresh project later" split; this repo grows incrementally all the way to the capstone
 11. Do not skip ahead or add code from future modules
+12. Do not change `main` to show the next module in advance; `main` should always remain the last completed checkpoint
 
 ## Knowledge Base References
 - Module 01: `../../_KNOWLEDGE_BASE/02_Playwright Project Pack/Module 1_ Getting Started with Playwright.docx`
