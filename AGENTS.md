@@ -91,7 +91,7 @@ main:  scaffold ──→ M01 complete ──→ M02 complete ──→ M03 comp
 ## Current Module
 **Module:** Module 04 — Writing Tests
 **Branch:** `module-04-writing-tests`
-**Status:** In progress
+**Status:** Complete
 **Next:** Module 05 — Advanced Features
 
 ---
