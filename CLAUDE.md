@@ -89,10 +89,10 @@ main:  scaffold ──→ M01 complete ──→ M02 complete ──→ M03 comp
 - **Plan changes?** → `../../CHANGELOG.md`
 
 ## Current Module
-**Module:** Module 01 — Getting Started with Playwright
-**Branch:** `module-01-getting-started`
-**Status:** Complete
-**Next:** Module 02 — Framework Foundation
+**Module:** Module 02 — Framework Foundation
+**Branch:** `module-02-framework-foundation`
+**Status:** In progress
+**Next:** Module 03 — Page Object Model
 
 ---
 
