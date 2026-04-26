@@ -10,6 +10,7 @@ const browserProjectIgnore = [
   /tests\/ui\/authenticated\//,
   /tests\/reporting\//,
 ];
+const mobileProjectIgnore = [...browserProjectIgnore, /tests\/ui\/capstone\//];
 
 export default defineConfig({
   testDir: './tests',
@@ -64,7 +65,7 @@ export default defineConfig({
     },
     {
       name: 'Mobile Chrome',
-      testIgnore: browserProjectIgnore,
+      testIgnore: mobileProjectIgnore,
       use: { ...devices['Pixel 5'] },
     },
     {

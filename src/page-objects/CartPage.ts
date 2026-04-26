@@ -8,6 +8,7 @@ export class CartPage extends BasePage {
   readonly cartItems: Locator;
   readonly checkoutButton: Locator;
   readonly continueShoppingButton: Locator;
+  readonly cartList: Locator;
 
   constructor(page: Page) {
     super(page);
@@ -15,6 +16,7 @@ export class CartPage extends BasePage {
     this.cartItems = page.locator('.cart_item');
     this.checkoutButton = page.locator('[data-test="checkout"]');
     this.continueShoppingButton = page.locator('[data-test="continue-shopping"]');
+    this.cartList = page.locator('.cart_list');
   }
 
   async goto(): Promise<void> {
@@ -27,6 +29,12 @@ export class CartPage extends BasePage {
 
   async getItemNames(): Promise<string[]> {
     return this.cartItems.locator('.inventory_item_name').allTextContents();
+  }
+
+  async getItemQuantities(): Promise<number[]> {
+    const quantities = await this.cartItems.locator('.cart_quantity').allTextContents();
+
+    return quantities.map(Number);
   }
 
   async removeItemByName(productName: SauceDemoProductName): Promise<void> {
@@ -53,6 +61,10 @@ export class CartPage extends BasePage {
 
   async getProductDescription(productName: SauceDemoProductName): Promise<string> {
     return (await this.cartItem(productName).locator('.inventory_item_desc').textContent()) ?? '';
+  }
+
+  async hasItem(productName: SauceDemoProductName): Promise<boolean> {
+    return this.cartItem(productName).isVisible();
   }
 
   async continueShopping(): Promise<void> {

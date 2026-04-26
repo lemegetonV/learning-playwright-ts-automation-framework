@@ -10,6 +10,11 @@ export class ProductsPage extends BasePage {
   readonly shoppingCartBadge: Locator;
   readonly shoppingCartLink: Locator;
   readonly sortDropdown: Locator;
+  readonly inventoryContainer: Locator;
+  readonly menuButton: Locator;
+  readonly logoutLink: Locator;
+  readonly resetAppStateLink: Locator;
+  readonly closeMenuButton: Locator;
 
   constructor(page: Page) {
     super(page);
@@ -18,6 +23,11 @@ export class ProductsPage extends BasePage {
     this.shoppingCartBadge = page.locator('.shopping_cart_badge');
     this.shoppingCartLink = page.locator('.shopping_cart_link');
     this.sortDropdown = page.locator('[data-test="product-sort-container"]');
+    this.inventoryContainer = page.locator('[data-test="inventory-container"]');
+    this.menuButton = page.locator('#react-burger-menu-btn');
+    this.logoutLink = page.locator('[data-test="logout-sidebar-link"]');
+    this.resetAppStateLink = page.locator('[data-test="reset-sidebar-link"]');
+    this.closeMenuButton = page.locator('#react-burger-cross-btn');
   }
 
   async goto(): Promise<void> {
@@ -30,6 +40,14 @@ export class ProductsPage extends BasePage {
 
   async getProductNames(): Promise<string[]> {
     return this.inventoryItems.locator('.inventory_item_name').allTextContents();
+  }
+
+  async getProductPrices(): Promise<string[]> {
+    return this.inventoryItems.locator('.inventory_item_price').allTextContents();
+  }
+
+  async getProductDescriptions(): Promise<string[]> {
+    return this.inventoryItems.locator('.inventory_item_desc').allTextContents();
   }
 
   async addProductToCart(productName: SauceDemoProductName): Promise<void> {
@@ -60,8 +78,31 @@ export class ProductsPage extends BasePage {
     return (await this.productCard(productName).locator('.inventory_item_price').textContent()) ?? '';
   }
 
+  async getProductDescription(productName: SauceDemoProductName): Promise<string> {
+    return (await this.productCard(productName).locator('.inventory_item_desc').textContent()) ?? '';
+  }
+
   async isProductInCart(productName: SauceDemoProductName): Promise<boolean> {
     return this.productCard(productName).getByRole('button', { name: 'Remove' }).isVisible();
+  }
+
+  async openProductDetails(productName: SauceDemoProductName): Promise<void> {
+    await this.productCard(productName).locator('.inventory_item_name').click();
+  }
+
+  async openMenu(): Promise<void> {
+    await this.menuButton.click();
+  }
+
+  async logout(): Promise<void> {
+    await this.openMenu();
+    await this.logoutLink.click();
+  }
+
+  async resetAppState(): Promise<void> {
+    await this.openMenu();
+    await this.resetAppStateLink.click();
+    await this.closeMenuButton.click();
   }
 
   private productCard(productName: SauceDemoProductName): Locator {

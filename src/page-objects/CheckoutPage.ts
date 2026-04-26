@@ -12,6 +12,13 @@ export class CheckoutPage extends BasePage {
   readonly errorMessage: Locator;
   readonly completeHeader: Locator;
   readonly backHomeButton: Locator;
+  readonly cancelButton: Locator;
+  readonly overviewItems: Locator;
+  readonly subtotalLabel: Locator;
+  readonly taxLabel: Locator;
+  readonly totalLabel: Locator;
+  readonly paymentInfoLabel: Locator;
+  readonly shippingInfoLabel: Locator;
 
   constructor(page: Page) {
     super(page);
@@ -23,6 +30,13 @@ export class CheckoutPage extends BasePage {
     this.errorMessage = page.locator('[data-test="error"]');
     this.completeHeader = page.locator('.complete-header');
     this.backHomeButton = page.locator('[data-test="back-to-products"]');
+    this.cancelButton = page.locator('[data-test="cancel"]');
+    this.overviewItems = page.locator('.cart_item');
+    this.subtotalLabel = page.locator('.summary_subtotal_label');
+    this.taxLabel = page.locator('.summary_tax_label');
+    this.totalLabel = page.locator('.summary_total_label');
+    this.paymentInfoLabel = page.locator('[data-test="payment-info-label"]');
+    this.shippingInfoLabel = page.locator('[data-test="shipping-info-label"]');
   }
 
   async fillCustomerInformation(customer: CheckoutCustomer): Promise<void> {
@@ -37,6 +51,30 @@ export class CheckoutPage extends BasePage {
 
   async finish(): Promise<void> {
     await this.finishButton.click();
+  }
+
+  async cancel(): Promise<void> {
+    await this.cancelButton.click();
+  }
+
+  async getOverviewItemNames(): Promise<string[]> {
+    return this.overviewItems.locator('.inventory_item_name').allTextContents();
+  }
+
+  async getOverviewItemPrices(): Promise<string[]> {
+    return this.overviewItems.locator('.inventory_item_price').allTextContents();
+  }
+
+  async getSubtotalText(): Promise<string> {
+    return (await this.subtotalLabel.textContent()) ?? '';
+  }
+
+  async getTaxText(): Promise<string> {
+    return (await this.taxLabel.textContent()) ?? '';
+  }
+
+  async getTotalText(): Promise<string> {
+    return (await this.totalLabel.textContent()) ?? '';
   }
 
   async getErrorMessage(): Promise<string> {
