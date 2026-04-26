@@ -144,8 +144,8 @@ export const CheckoutValidationCases: readonly CheckoutValidationCase[] = [
     expectedError: 'Error: First Name is required',
   },
   {
-    title: 'first name whitespace only',
-    customer: { firstName: ' ', lastName: 'Tester', postalCode: '560001' },
-    expectedError: 'Error: First Name is required',
+    title: 'missing last name and postal code',
+    customer: { firstName: 'Asha', lastName: '', postalCode: '' },
+    expectedError: 'Error: Last Name is required',
   },
 ];
