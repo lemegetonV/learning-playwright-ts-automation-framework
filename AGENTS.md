@@ -89,10 +89,10 @@ main:  scaffold ──→ M01 complete ──→ M02 complete ──→ M03 comp
 - **Plan changes?** → `../../CHANGELOG.md`
 
 ## Current Module
-**Module:** Module 05 — Advanced Features
-**Branch:** `module-05-advanced-features`
-**Status:** Complete
-**Next:** Module 06 — Reporting & CI/CD
+**Module:** Module 06 — Reporting & CI/CD
+**Branch:** `module-06-reporting-cicd`
+**Status:** In progress
+**Next:** Module 07 — Capstone: Real World Project
 
 ---
 
