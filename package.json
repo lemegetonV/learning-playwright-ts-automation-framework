@@ -19,7 +19,7 @@
     "test:capstone": "playwright test tests/ui/capstone tests/api/capstone",
     "test:capstone:ui": "playwright test tests/ui/capstone --project=chromium --project=firefox --project=webkit",
     "test:capstone:api": "playwright test tests/api/capstone --project=api",
-    "test:allure": "playwright test --project=reporting-chromium",
+    "test:reporting:allure": "playwright test --project=reporting-chromium",
     "test:summary": "playwright test --project=reporting-chromium --reporter=./reporters/console-summary-reporter.ts",
     "test:ci": "playwright test",
     "test:smoke": "playwright test --grep @smoke",
