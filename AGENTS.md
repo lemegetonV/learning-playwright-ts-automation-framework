@@ -89,10 +89,10 @@ main:  scaffold ──→ M01 complete ──→ M02 complete ──→ M03 comp
 - **Plan changes?** → `../../CHANGELOG.md`
 
 ## Current Module
-**Module:** Module 02 — Framework Foundation
-**Branch:** `module-02-framework-foundation`
-**Status:** Complete
-**Next:** Module 03 — Page Object Model
+**Module:** Module 03 — Page Object Model
+**Branch:** `module-03-page-object-model`
+**Status:** In progress
+**Next:** Module 04 — Writing Tests
 
 ---
 
