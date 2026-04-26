@@ -91,7 +91,7 @@ main:  scaffold ──→ M01 complete ──→ M02 complete ──→ M03 comp
 ## Current Module
 **Module:** Module 02 — Framework Foundation
 **Branch:** `module-02-framework-foundation`
-**Status:** In progress
+**Status:** Complete
 **Next:** Module 03 — Page Object Model
 
 ---
