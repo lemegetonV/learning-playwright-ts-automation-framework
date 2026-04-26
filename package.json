@@ -1,0 +1,19 @@
+{
+  "name": "ui-testing-playwright-framework",
+  "version": "0.1.0",
+  "private": true,
+  "description": "UI test automation learning project built module-by-module with Playwright and TypeScript.",
+  "scripts": {
+    "test": "playwright test",
+    "test:headed": "playwright test --headed",
+    "test:debug": "playwright test --debug",
+    "typecheck": "tsc --noEmit",
+    "report": "playwright show-report reports/playwright-html",
+    "install:browsers": "playwright install"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.59.1",
+    "@types/node": "^25.6.0",
+    "typescript": "^6.0.3"
+  }
+}
