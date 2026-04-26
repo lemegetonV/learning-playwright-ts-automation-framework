@@ -8,6 +8,8 @@ reports/*
 !reports/.gitkeep
 test-results/
 playwright-report/
+playwright/.auth/*
+!playwright/.auth/.gitkeep
 
 dist/
 build/
