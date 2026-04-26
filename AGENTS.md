@@ -91,7 +91,7 @@ main:  scaffold ──→ M01 complete ──→ M02 complete ──→ M03 comp
 ## Current Module
 **Module:** Module 07 — Capstone: Real World Project
 **Branch:** `module-07-capstone`
-**Status:** In progress
+**Status:** Complete
 **Next:** Module 08 — Portfolio & Interview Packaging
 
 ---
