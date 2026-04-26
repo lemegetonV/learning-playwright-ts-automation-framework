@@ -17,21 +17,31 @@ test.describe('SauceDemo products', () => {
     await expect(productsPage.title).toHaveText('Products');
   });
 
-  test('standard user can see the product catalog', async () => {
-    await expect(productsPage.inventoryItems).toHaveCount(6);
-    await expect(productsPage.sortDropdown).toBeVisible();
-    await expect(productsPage.shoppingCartLink).toBeVisible();
+  test('standard user can see the product catalog @smoke', async () => {
+    await test.step('Assert: product catalog controls and items are visible', async () => {
+      await expect(productsPage.inventoryItems).toHaveCount(6);
+      await expect(productsPage.sortDropdown).toBeVisible();
+      await expect(productsPage.shoppingCartLink).toBeVisible();
+    });
   });
 
   test('standard user can add and remove a product from the cart badge', async () => {
-    await productsPage.addProductToCart('Sauce Labs Backpack');
+    await test.step('Act: add product to the cart', async () => {
+      await productsPage.addProductToCart('Sauce Labs Backpack');
+    });
 
-    await expect(productsPage.shoppingCartBadge).toHaveText('1');
-    expect(await productsPage.isProductInCart('Sauce Labs Backpack')).toBe(true);
+    await test.step('Assert: cart badge increments and product card changes state', async () => {
+      await expect(productsPage.shoppingCartBadge).toHaveText('1');
+      expect(await productsPage.isProductInCart('Sauce Labs Backpack')).toBe(true);
+    });
 
-    await productsPage.removeProductFromCart('Sauce Labs Backpack');
+    await test.step('Act: remove product from the cart', async () => {
+      await productsPage.removeProductFromCart('Sauce Labs Backpack');
+    });
 
-    expect(await productsPage.getCartItemCount()).toBe(0);
+    await test.step('Assert: cart badge is cleared', async () => {
+      expect(await productsPage.getCartItemCount()).toBe(0);
+    });
   });
 
   test('standard user can sort products by price low to high', async () => {

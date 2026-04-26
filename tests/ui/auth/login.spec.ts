@@ -13,13 +13,17 @@ test.describe('SauceDemo login', () => {
     await loginPage.goto();
   });
 
-  test('standard user can log in and reach the inventory page', async ({ page }) => {
+  test('standard user can log in and reach the inventory page @smoke', async ({ page }) => {
     const productsPage = new ProductsPage(page);
 
-    await loginPage.login(SauceDemoUsers.standard);
+    await test.step('Act: log in as the standard user', async () => {
+      await loginPage.login(SauceDemoUsers.standard);
+    });
 
-    await expect(page).toHaveURL(/inventory.html/);
-    await expect(productsPage.title).toHaveText('Products');
+    await test.step('Assert: inventory page is shown', async () => {
+      await expect(page).toHaveURL(/inventory.html/);
+      await expect(productsPage.title).toHaveText('Products');
+    });
   });
 
   test('user sees an error message for invalid login credentials', async ({ page }) => {

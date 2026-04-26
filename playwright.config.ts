@@ -2,6 +2,7 @@ import { defineConfig, devices } from '@playwright/test';
 import 'dotenv/config';
 
 const baseURL = process.env.BASE_URL ?? 'https://www.saucedemo.com';
+const browserProjectIgnore = [/tests\/api\//];
 
 export default defineConfig({
   testDir: './tests',
@@ -31,19 +32,27 @@ export default defineConfig({
   projects: [
     {
       name: 'chromium',
+      testIgnore: browserProjectIgnore,
       use: { ...devices['Desktop Chrome'] },
     },
     {
       name: 'firefox',
+      testIgnore: browserProjectIgnore,
       use: { ...devices['Desktop Firefox'] },
     },
     {
       name: 'webkit',
+      testIgnore: browserProjectIgnore,
       use: { ...devices['Desktop Safari'] },
     },
     {
       name: 'Mobile Chrome',
+      testIgnore: browserProjectIgnore,
       use: { ...devices['Pixel 5'] },
+    },
+    {
+      name: 'api',
+      testMatch: /tests\/api\/.*\.spec\.ts/,
     },
   ],
 });
