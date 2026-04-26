@@ -91,7 +91,7 @@ main:  scaffold ──→ M01 complete ──→ M02 complete ──→ M03 comp
 ## Current Module
 **Module:** Module 05 — Advanced Features
 **Branch:** `module-05-advanced-features`
-**Status:** In progress
+**Status:** Complete
 **Next:** Module 06 — Reporting & CI/CD
 
 ---
