@@ -34,13 +34,14 @@ flowchart TD
 
 | File | Status | Purpose |
 |---|---|---|
-| `playwright.config.ts` | changed | Adds JSON, JUnit, Allure reporters and a reporting project |
-| `package.json` | changed | Adds Allure/reporting/CI/custom-summary scripts and dev dependencies |
-| `.gitignore` | changed | Ignores generated report folders and CI artifacts |
-| `reporters/console-summary-reporter.ts` | added | Demonstrates a small custom reporter |
-| `tests/reporting/artifact-capture.spec.ts` | added | Demonstrates manual screenshot attachment and report artifact output |
-| `.github/workflows/playwright.yml` | added | Runs typecheck/tests in GitHub Actions and uploads artifacts |
+| [playwright.config.ts](../../playwright.config.ts) | changed | Adds JSON, JUnit, Allure reporters and a reporting project |
+| [package.json](../../package.json) | changed | Adds Allure/reporting/CI/custom-summary scripts and dev dependencies |
+| [.gitignore](../../.gitignore) | changed | Ignores generated report folders and CI artifacts |
+| [reporters/console-summary-reporter.ts](../../reporters/console-summary-reporter.ts) | added | Demonstrates a small custom reporter |
+| [tests/reporting/artifact-capture.spec.ts](../../tests/reporting/artifact-capture.spec.ts) | added | Demonstrates manual screenshot attachment and report artifact output |
+| [.github/workflows/playwright.yml](../../.github/workflows/playwright.yml) | added | Runs typecheck/tests in GitHub Actions and uploads artifacts |
 | `docs/module-06-reporting-cicd/*` | added | Explains reporting, traces, Allure, CI, and debugging workflow |
+| [05-framework-lifecycle-deep-dive.md](./05-framework-lifecycle-deep-dive.md) | added | Explains the reporting pipeline, custom reporter hooks, CI artifact flow, and failure triage |
 
 ## Reporting Layers
 
@@ -49,12 +50,12 @@ Module 06 uses multiple reporting layers because each layer serves a different a
 | Layer | Output | Audience |
 |---|---|---|
 | Console list reporter | terminal output | developer running tests now |
-| HTML report | `reports/playwright-html` | developer debugging a run interactively |
-| JSON report | `reports/test-results/results.json` | tools/scripts that parse structured results |
-| JUnit report | `reports/test-results/junit.xml` | CI systems that understand test result XML |
-| Allure results | `reports/allure-results` | richer historical/interactive reporting |
+| HTML report | [reports/playwright-html](../../reports/playwright-html) | developer debugging a run interactively |
+| JSON report | [reports/test-results/results.json](../../reports/test-results/results.json) | tools/scripts that parse structured results |
+| JUnit report | [reports/test-results/junit.xml](../../reports/test-results/junit.xml) | CI systems that understand test result XML |
+| Allure results | [reports/allure-results](../../reports/allure-results) | richer historical/interactive reporting |
 | Custom reporter script | console summary | learning how reporters hook into Playwright without making every run noisy |
-| Artifacts | `reports/test-artifacts` | screenshots, videos, traces, downloads, attachments |
+| Artifacts | [reports/test-artifacts](../../reports/test-artifacts) | screenshots, videos, traces, downloads, attachments |
 
 ## Why Reports Are Not Committed
 

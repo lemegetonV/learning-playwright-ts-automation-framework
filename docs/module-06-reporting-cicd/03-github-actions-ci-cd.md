@@ -54,7 +54,7 @@ instead of:
 npm install
 ```
 
-`npm ci` installs exactly from `package-lock.json` and fails if the lockfile is out of sync. That is better for repeatable CI.
+`npm ci` installs exactly from [package-lock.json](../../package-lock.json) and fails if the lockfile is out of sync. That is better for repeatable CI.
 
 ## Why Install Playwright Browsers In CI
 
@@ -80,10 +80,10 @@ This script currently runs the same configured suite as `npm test`, but it gives
 
 The workflow uploads:
 
-- `reports/playwright-html`
-- `reports/test-results`
-- `reports/allure-results`
-- `reports/test-artifacts`
+- [reports/playwright-html](../../reports/playwright-html)
+- [reports/test-results](../../reports/test-results)
+- [reports/allure-results](../../reports/allure-results)
+- [reports/test-artifacts](../../reports/test-artifacts)
 
 The upload runs with `if: always()` so reports are available even when tests fail.
 
@@ -103,6 +103,6 @@ In a real team, a Slack notification step would usually run after tests and read
 
 Read:
 
-- `.github/workflows/playwright.yml`
-- `package.json`
-- `playwright.config.ts`
+- [.github/workflows/playwright.yml](../../.github/workflows/playwright.yml)
+- [package.json](../../package.json)
+- [playwright.config.ts](../../playwright.config.ts)

@@ -17,13 +17,13 @@ flowchart LR
   C --> D["reports/allure-report"]
 ```
 
-`reports/allure-results` contains raw result files.
+[reports/allure-results](../../reports/allure-results) contains raw result files.
 
-`reports/allure-report` is the generated HTML report.
+[reports/allure-report](../../reports/allure-report) is the generated HTML report.
 
 ## Configured Allure Reporter
 
-`playwright.config.ts` includes:
+[playwright.config.ts](../../playwright.config.ts) includes:
 
 ```ts
 [
@@ -40,7 +40,7 @@ The important option is `resultsDir`, because it keeps generated files under the
 
 ## Allure Scripts
 
-`package.json` includes:
+[package.json](../../package.json) includes:
 
 ```json
 {
@@ -64,7 +64,7 @@ npm run allure:open
 
 Playwright supports annotations through `test.info().annotations`.
 
-`tests/reporting/artifact-capture.spec.ts` uses annotations to demonstrate report metadata:
+[tests/reporting/artifact-capture.spec.ts](../../tests/reporting/artifact-capture.spec.ts) uses annotations to demonstrate report metadata:
 
 ```ts
 testInfo.annotations.push({
@@ -77,7 +77,7 @@ Metadata should clarify reporting, not hide test logic. Keep business behavior i
 
 ## Custom Reporter
 
-Module 06 adds `reporters/console-summary-reporter.ts`.
+Module 06 adds [reporters/console-summary-reporter.ts](../../reporters/console-summary-reporter.ts).
 
 A custom reporter hooks into Playwright's reporting lifecycle:
 
@@ -121,7 +121,7 @@ They are costly when:
 
 Read:
 
-- `reporters/console-summary-reporter.ts`
-- `playwright.config.ts`
-- `tests/reporting/artifact-capture.spec.ts`
-- `package.json`
+- [reporters/console-summary-reporter.ts](../../reporters/console-summary-reporter.ts)
+- [playwright.config.ts](../../playwright.config.ts)
+- [tests/reporting/artifact-capture.spec.ts](../../tests/reporting/artifact-capture.spec.ts)
+- [package.json](../../package.json)

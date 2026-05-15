@@ -18,7 +18,7 @@ Open the reporting test and identify:
 - attached screenshot
 - test annotations
 
-Hint: The reporting test lives in `tests/reporting/artifact-capture.spec.ts`.
+Hint: The reporting test lives in [tests/reporting/artifact-capture.spec.ts](../../tests/reporting/artifact-capture.spec.ts).
 
 ## Exercise 2: Generate Allure Locally
 
@@ -29,26 +29,28 @@ npm run test:allure
 npm run allure:generate
 ```
 
-Then inspect the generated files under `reports/allure-report`.
+Then inspect the generated files under [reports/allure-report](../../reports/allure-report).
 
 Hint: Generated report folders are intentionally ignored by Git.
 
 ## Exercise 3: Read The GitHub Actions Workflow
 
-Open `.github/workflows/playwright.yml`.
+Open [.github/workflows/playwright.yml](../../.github/workflows/playwright.yml).
 
 Write down what each step does and why `if: always()` is used for artifact upload.
 
 Hint: A failed test run should still upload reports.
 
-## Exercise 4: Add A CI Artifact Path
+## Exercise 4: Audit CI Artifact Paths
 
-Add one more artifact path to the workflow for a report folder you think might be useful later.
+Compare the artifact paths in [.github/workflows/playwright.yml](../../.github/workflows/playwright.yml) with the generated output configured in [playwright.config.ts](../../playwright.config.ts) and ignored in [.gitignore](../../.gitignore).
 
-Hint: Keep it under `reports/` so `.gitignore` already handles local generated output.
+Write down which report folders are already covered. If you add another artifact path, choose a folder that this module already generates under `reports/` and explain why it belongs in CI output.
+
+Hint: Artifact paths should preserve evidence from the current framework, not placeholders for future reports.
 
 ## Exercise 5: Add A Custom Reporter Field
 
-Extend `reporters/console-summary-reporter.ts` to include the project name when a test ends.
+Extend [reporters/console-summary-reporter.ts](../../reporters/console-summary-reporter.ts) to include the project name when a test ends.
 
 Hint: Inspect the `test` object and keep the output concise.

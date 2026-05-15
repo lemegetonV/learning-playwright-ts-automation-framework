@@ -19,7 +19,7 @@ Module 06 configures Playwright so those answers are easier to find.
 
 ## HTML Report
 
-`playwright.config.ts` writes the built-in HTML report here:
+[playwright.config.ts](../../playwright.config.ts) writes the built-in HTML report here:
 
 ```ts
 ['html', { outputFolder: 'reports/playwright-html', open: 'never' }]
@@ -79,7 +79,7 @@ This balances debugging value and artifact size. Keeping video and traces for ev
 
 ## Manual Attachments
 
-`tests/reporting/artifact-capture.spec.ts` demonstrates explicit artifact capture:
+[tests/reporting/artifact-capture.spec.ts](../../tests/reporting/artifact-capture.spec.ts) demonstrates explicit artifact capture:
 
 ```ts
 const screenshotPath = testInfo.outputPath('module-06-report-artifact.png');
@@ -120,7 +120,7 @@ The trace is often better than guessing from the final screenshot because it sho
 
 Read:
 
-- `playwright.config.ts`
-- `tests/reporting/artifact-capture.spec.ts`
-- `package.json`
-- `.gitignore`
+- [playwright.config.ts](../../playwright.config.ts)
+- [tests/reporting/artifact-capture.spec.ts](../../tests/reporting/artifact-capture.spec.ts)
+- [package.json](../../package.json)
+- [.gitignore](../../.gitignore)
