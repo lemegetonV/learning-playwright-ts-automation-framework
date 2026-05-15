@@ -4,7 +4,7 @@ These exercises extend the Module 02 foundation without jumping into page object
 
 ## Exercise 1: Trace The Config
 
-Open `playwright.config.ts`.
+Open [playwright.config.ts](../../playwright.config.ts).
 
 Write down where each of these values is configured:
 
@@ -15,11 +15,11 @@ Write down where each of these values is configured:
 - mobile project
 - assertion timeout
 
-Hint: Read `01-playwright-config.md` beside the config file.
+Hint: Read [01-playwright-config.md](./01-playwright-config.md) beside the config file.
 
 ## Exercise 2: Add A Browser-Focused Script
 
-Add one script to `package.json` that runs only the login spec in Chromium.
+Add one script to [package.json](../../package.json) that runs only the login spec in Chromium.
 
 Suggested command shape:
 
@@ -49,9 +49,9 @@ After the experiment, restore the original code unless the new role is real.
 
 Hint: This shows how `satisfies Record<SauceDemoUserRole, TestUser>` keeps the data object complete.
 
-## Exercise 5: Read `.gitignore` Like A Reviewer
+## Exercise 5: Read [.gitignore](../../.gitignore) Like A Reviewer
 
-Open `.gitignore` and explain why each of these should not be committed:
+Open [.gitignore](../../.gitignore) and explain why each of these should not be committed:
 
 - `node_modules/`
 - `.env`

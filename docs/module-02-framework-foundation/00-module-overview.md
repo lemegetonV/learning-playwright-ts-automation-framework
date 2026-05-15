@@ -8,10 +8,10 @@ The goal is not to add many tests. The goal is to make the existing tests easier
 
 Module 02 adds:
 
-- richer `playwright.config.ts` settings
+- richer [playwright.config.ts](../../playwright.config.ts) settings
 - environment variable support through `dotenv`
-- `.env.example` as a safe template
-- typed SauceDemo users under `src/types/` and `src/utils/`
+- [.env.example](../../.env.example) as a safe template
+- typed SauceDemo users under [src/types/](../../src/types) and [src/utils/](../../src/utils)
 - npm scripts for common execution modes
 - project structure conventions that later modules build on
 
@@ -42,15 +42,16 @@ Module 02 is the layer that keeps later modules from becoming ad hoc.
 
 | File | Status In Module 02 | Learning Purpose |
 |---|---|---|
-| `playwright.config.ts` | changed | Centralizes browser projects, timeouts, reports, artifacts, and `baseURL` |
-| `package.json` | changed | Adds scripts for headed/debug/UI/browser-specific runs |
-| `package-lock.json` | changed | Locks new dependency versions |
-| `.env.example` | added | Documents supported environment variables without committing secrets |
-| `.gitignore` | changed | Ignores generated reports, auth state, env files, and dependency folders |
-| `src/types/test-users.ts` | added | Defines typed SauceDemo user shapes |
-| `src/utils/test-users.ts` | added | Reads users from environment variables with safe fallbacks |
-| `tests/learning/first-run.spec.ts` | changed | Uses reusable test user data |
-| `tests/ui/auth/login.spec.ts` | changed | Uses reusable test user data |
+| [playwright.config.ts](../../playwright.config.ts) | changed | Centralizes browser projects, timeouts, reports, artifacts, and `baseURL` |
+| [package.json](../../package.json) | changed | Adds scripts for headed/debug/UI/browser-specific runs |
+| [package-lock.json](../../package-lock.json) | changed | Locks new dependency versions |
+| [.env.example](../../.env.example) | added | Documents supported environment variables without committing secrets |
+| [.gitignore](../../.gitignore) | changed | Ignores generated reports, auth state, env files, and dependency folders |
+| [src/types/test-users.ts](../../src/types/test-users.ts) | added | Defines typed SauceDemo user shapes |
+| [src/utils/test-users.ts](../../src/utils/test-users.ts) | added | Reads users from environment variables with safe fallbacks |
+| [tests/learning/first-run.spec.ts](../../tests/learning/first-run.spec.ts) | changed | Uses reusable test user data |
+| [tests/ui/auth/login.spec.ts](../../tests/ui/auth/login.spec.ts) | changed | Uses reusable test user data |
+| [04-framework-lifecycle-deep-dive.md](./04-framework-lifecycle-deep-dive.md) | added | Explains how config, env data, typed users, and specs work together |
 
 ## Core Design Decision
 
@@ -102,6 +103,6 @@ Module 02 is complete when:
 - `npm run typecheck` passes
 - `npm test` passes
 - config supports Chromium, Firefox, WebKit, and mobile project definitions
-- environment variables are documented in `.env.example`
+- environment variables are documented in [.env.example](../../.env.example)
 - user credentials are centralized in typed helpers
 - docs explain every file introduced or changed by the module

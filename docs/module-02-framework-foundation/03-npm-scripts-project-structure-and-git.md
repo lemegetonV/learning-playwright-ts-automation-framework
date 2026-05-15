@@ -4,7 +4,7 @@
 
 Playwright commands can get long. npm scripts give the team consistent shortcuts.
 
-Module 02 expands `package.json` with:
+Module 02 expands [package.json](../../package.json) with:
 
 ```json
 {
@@ -73,15 +73,15 @@ The structure tells future contributors where code belongs.
 
 Examples:
 
-- user data types go in `src/types/`
-- user data builders go in `src/utils/`
-- page object classes will go in `src/page-objects/`
+- user data types go in [src/types/](../../src/types)
+- user data builders go in [src/utils/](../../src/utils)
+- page object classes will go in [src/page-objects/](../../src/page-objects)
 - test specs stay under `tests/`
 - generated report output stays under `reports/`
 
 This prevents the common beginner problem where helpers are placed beside whichever spec needed them first.
 
-## `.gitignore`
+## [.gitignore](../../.gitignore)
 
 Git should track source code and learning docs. It should not track generated or local-only files.
 
@@ -98,12 +98,12 @@ playwright/.auth/*
 
 Reasons:
 
-- `node_modules/` is reproducible from `package-lock.json`
+- `node_modules/` is reproducible from [package-lock.json](../../package-lock.json)
 - `.env` may contain secrets
 - reports and test artifacts are generated
 - auth state files can contain session cookies
 
-The `playwright/.auth/.gitkeep` exception is added later when saved auth state arrives.
+The [playwright/.auth/.gitkeep](../../playwright/.auth/.gitkeep) exception is added later when saved auth state arrives.
 
 ## Git Checkpoint Discipline
 
@@ -121,5 +121,5 @@ That history matters because this repo is a curriculum. A learner should be able
 
 - npm scripts make framework commands discoverable.
 - Folder structure should guide future code placement.
-- `.gitignore` protects generated files and local secrets.
+- [.gitignore](../../.gitignore) protects generated files and local secrets.
 - Module history is part of the learning experience, not just bookkeeping.

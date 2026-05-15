@@ -1,8 +1,8 @@
 # Playwright Configuration Deep Dive
 
-## Why `playwright.config.ts` Is The Framework's Control Panel
+## Why [playwright.config.ts](../../playwright.config.ts) Is The Framework's Control Panel
 
-Specs describe test behavior. `playwright.config.ts` describes how the test runner should execute that behavior.
+Specs describe test behavior. [playwright.config.ts](../../playwright.config.ts) describes how the test runner should execute that behavior.
 
 It answers questions such as:
 
@@ -35,11 +35,11 @@ This tells Playwright where to discover specs. The repo uses `tests/` from Modul
 
 Future modules organize tests by domain:
 
-- `tests/ui/auth`
-- `tests/ui/products`
-- `tests/ui/cart`
-- `tests/ui/checkout`
-- `tests/api`
+- [tests/ui/auth](../../tests/ui/auth)
+- [tests/ui/products](../../tests/ui/products)
+- [tests/ui/cart](../../tests/ui/cart)
+- [tests/ui/checkout](../../tests/ui/checkout)
+- [tests/api](../../tests/api)
 
 ## Parallelism
 
