@@ -42,13 +42,13 @@ A reviewer should be able to open the repo and see:
 
 Read in this order:
 
-1. `docs/module-07-capstone/00-module-overview.md`
-2. `src/utils/capstone-data.ts`
-3. `tests/ui/capstone/auth/login-capstone.spec.ts`
-4. `tests/ui/capstone/products/products-capstone.spec.ts`
-5. `tests/ui/capstone/cart/cart-capstone.spec.ts`
-6. `tests/ui/capstone/checkout/checkout-capstone.spec.ts`
-7. `tests/api/capstone/capstone-api.spec.ts`
+1. [docs/module-07-capstone/00-module-overview.md](./00-module-overview.md)
+2. [src/utils/capstone-data.ts](../../src/utils/capstone-data.ts)
+3. [tests/ui/capstone/auth/login-capstone.spec.ts](../../tests/ui/capstone/auth/login-capstone.spec.ts)
+4. [tests/ui/capstone/products/products-capstone.spec.ts](../../tests/ui/capstone/products/products-capstone.spec.ts)
+5. [tests/ui/capstone/cart/cart-capstone.spec.ts](../../tests/ui/capstone/cart/cart-capstone.spec.ts)
+6. [tests/ui/capstone/checkout/checkout-capstone.spec.ts](../../tests/ui/capstone/checkout/checkout-capstone.spec.ts)
+7. [tests/api/capstone/capstone-api.spec.ts](../../tests/api/capstone/capstone-api.spec.ts)
 
 This order moves from strategy to data to behavior.
 

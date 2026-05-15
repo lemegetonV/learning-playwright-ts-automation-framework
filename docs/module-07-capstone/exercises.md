@@ -26,7 +26,7 @@ Hint: Comments should explain risk or intent, not restate the code.
 
 Add one more assertion to a product information test using `CapstoneProducts`.
 
-Hint: Keep the expected data in `src/utils/capstone-data.ts`.
+Hint: Keep the expected data in [src/utils/capstone-data.ts](../../src/utils/capstone-data.ts).
 
 ## Exercise 4: Improve One Test Title
 

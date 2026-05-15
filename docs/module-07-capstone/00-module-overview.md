@@ -56,14 +56,15 @@ The earlier learning specs remain in place. Keeping capstone tests separate make
 
 | File | Purpose |
 |---|---|
-| `src/types/capstone.ts` | Shared capstone data shapes |
-| `src/utils/capstone-data.ts` | Product, login, checkout, and API test data |
-| `src/page-objects/ProductsPage.ts` | Adds capstone helpers for product details and menu/logout |
-| `src/page-objects/CartPage.ts` | Adds cart display and empty-cart helpers |
-| `src/page-objects/CheckoutPage.ts` | Adds overview, totals, and navigation helpers |
-| `playwright.config.ts` | Keeps capstone UI tests on desktop browsers, not mobile |
+| [src/types/capstone.ts](../../src/types/capstone.ts) | Shared capstone data shapes |
+| [src/utils/capstone-data.ts](../../src/utils/capstone-data.ts) | Product, login, checkout, and API test data |
+| [src/page-objects/ProductsPage.ts](../../src/page-objects/ProductsPage.ts) | Adds capstone helpers for product details and menu/logout |
+| [src/page-objects/CartPage.ts](../../src/page-objects/CartPage.ts) | Adds cart display and empty-cart helpers |
+| [src/page-objects/CheckoutPage.ts](../../src/page-objects/CheckoutPage.ts) | Adds overview, totals, and navigation helpers |
+| [playwright.config.ts](../../playwright.config.ts) | Keeps capstone UI tests on desktop browsers, not mobile |
 | `tests/ui/capstone/**` | 88 logical UI capstone tests |
 | `tests/api/capstone/**` | 15 logical API-style capstone tests |
+| [05-framework-lifecycle-deep-dive.md](./05-framework-lifecycle-deep-dive.md) | Explains capstone suite architecture, data flow, execution strategy, and review model |
 
 ## What Makes The Capstone Portfolio-Grade
 

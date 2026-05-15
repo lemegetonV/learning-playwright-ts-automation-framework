@@ -29,7 +29,7 @@ Module 07 therefore adds API-style tests that validate:
 tests/api/capstone/capstone-api.spec.ts
 ```
 
-The tests run in the existing `api` Playwright project because `playwright.config.ts` already routes `tests/api/**/*.spec.ts` there.
+The tests run in the existing `api` Playwright project because [playwright.config.ts](../../playwright.config.ts) already routes `tests/api/**/*.spec.ts` there.
 
 ## What These Tests Teach
 
@@ -56,7 +56,7 @@ If the portfolio later points to a real backend, these tests can evolve into rea
 
 The structure is already compatible with that move:
 
-- keep API tests under `tests/api`
+- keep API tests under [tests/api](../../tests/api)
 - define response contracts as types
 - keep expected data centralized
 - assert status, shape, and business meaning

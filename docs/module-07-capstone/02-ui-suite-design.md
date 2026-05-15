@@ -53,7 +53,7 @@ They cover:
 They use:
 
 - `ProductsPage`
-- typed product data from `src/utils/capstone-data.ts`
+- typed product data from [src/utils/capstone-data.ts](../../src/utils/capstone-data.ts)
 - `ProductSortOption`
 
 ## Cart Tests
@@ -110,8 +110,8 @@ They are intentionally excluded from the mobile project so the capstone target m
 
 Read:
 
-- `src/utils/capstone-data.ts`
-- `tests/ui/capstone/auth/login-capstone.spec.ts`
-- `tests/ui/capstone/products/products-capstone.spec.ts`
-- `tests/ui/capstone/cart/cart-capstone.spec.ts`
-- `tests/ui/capstone/checkout/checkout-capstone.spec.ts`
+- [src/utils/capstone-data.ts](../../src/utils/capstone-data.ts)
+- [tests/ui/capstone/auth/login-capstone.spec.ts](../../tests/ui/capstone/auth/login-capstone.spec.ts)
+- [tests/ui/capstone/products/products-capstone.spec.ts](../../tests/ui/capstone/products/products-capstone.spec.ts)
+- [tests/ui/capstone/cart/cart-capstone.spec.ts](../../tests/ui/capstone/cart/cart-capstone.spec.ts)
+- [tests/ui/capstone/checkout/checkout-capstone.spec.ts](../../tests/ui/capstone/checkout/checkout-capstone.spec.ts)
