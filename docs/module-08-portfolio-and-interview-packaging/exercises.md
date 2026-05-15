@@ -4,16 +4,16 @@ These exercises reinforce packaging and review. They do not ask you to create st
 
 ## Exercise 1: README Traceability Audit
 
-Pick five claims from `README.md`.
+Pick five claims from [README.md](../../README.md).
 
 For each claim, identify the file that proves it.
 
 Examples:
 
-- a test command should map to `package.json`
-- a report path should map to `playwright.config.ts`
-- a page object claim should map to `src/page-objects/`
-- a CI claim should map to `.github/workflows/playwright.yml`
+- a test command should map to [package.json](../../package.json)
+- a report path should map to [playwright.config.ts](../../playwright.config.ts)
+- a page object claim should map to [src/page-objects/](../../src/page-objects)
+- a CI claim should map to [.github/workflows/playwright.yml](../../.github/workflows/playwright.yml)
 
 Hint: If you cannot trace a claim to a file, the claim may be too vague.
 
@@ -34,7 +34,7 @@ Then answer:
 - which folder contains the generated Allure HTML report?
 - why should neither folder be committed?
 
-Hint: Compare the generated folders with `.gitignore`.
+Hint: Compare the generated folders with [.gitignore](../../.gitignore).
 
 ## Exercise 3: Capstone Command Review
 
@@ -44,7 +44,7 @@ Run the capstone API suite:
 npm run test:capstone:api
 ```
 
-Then open `tests/api/capstone/capstone-api.spec.ts` and identify:
+Then open [tests/api/capstone/capstone-api.spec.ts](../../tests/api/capstone/capstone-api.spec.ts) and identify:
 
 - which tests represent authentication behavior
 - which tests represent product behavior
@@ -57,13 +57,13 @@ Hint: The API-style tests are deterministic learning examples. They do not call 
 
 Draft a repository description and ten GitHub topics for this project.
 
-Use `docs/module-08-portfolio-and-interview-packaging/02-github-and-report-packaging.md` as your guide.
+Use [docs/module-08-portfolio-and-interview-packaging/02-github-and-report-packaging.md](./02-github-and-report-packaging.md) as your guide.
 
 Constraint: The description must be truthful to this repository. Do not claim production usage, real business impact, or features that are not implemented.
 
-## Exercise 5: Final Branch Check
+## Exercise 5: Final Checkpoint Review
 
-Before Module 08 is marked complete, inspect the module chain:
+After Module 08 is complete, inspect the module chain:
 
 ```bash
 git log --oneline --decorate --graph --all -12
@@ -73,7 +73,8 @@ git tag --list 'module-*' --sort=version:refname
 Answer:
 
 - where does `main` point?
+- does `main` match `module-08-complete`?
+- does `module-08-portfolio-and-interview-packaging` match `module-08-complete`?
 - which module tag is the latest?
-- which branch contains the current Module 08 work?
 
-Hint: Until Module 08 is complete, `main` should still point to `module-07-complete`.
+Hint: At the completed checkpoint, `main`, the Module 08 branch, and `module-08-complete` should point to the same commit. Before Module 08 is completed, `main` would still point to `module-07-complete`.

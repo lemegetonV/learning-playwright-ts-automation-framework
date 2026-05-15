@@ -4,13 +4,13 @@
 
 A README should not be a marketing page detached from the code. It is a contract between the repository and the reader.
 
-When the README says "run this command," the command should exist in `package.json`. When it says the framework has page objects, the files should exist under `src/page-objects/`. When it says reports are generated, the report paths should match `playwright.config.ts`.
+When the README says "run this command," the command should exist in [package.json](../../package.json). When it says the framework has page objects, the files should exist under [src/page-objects/](../../src/page-objects). When it says reports are generated, the report paths should match [playwright.config.ts](../../playwright.config.ts).
 
 That is why Module 08 writes the README after the framework is built. The README can now describe the real project instead of guessing what the project might become.
 
 ## What The README Must Answer
 
-The final `README.md` should help a new reader move from zero context to a working test run.
+The final [README.md](../../README.md) should help a new reader move from zero context to a working test run.
 
 ```mermaid
 flowchart TD
@@ -26,14 +26,14 @@ The README in this repository is organized around those steps:
 
 | README Section | Why It Exists | Project Files It Connects To |
 |---|---|---|
-| Overview | Explains what the framework tests | `tests/`, `src/`, `playwright.config.ts` |
-| Tech stack | Shows the major tools | `package.json`, `tsconfig.json` |
-| Architecture | Explains how the framework is layered | `src/page-objects/`, `src/fixtures/`, `src/utils/`, `tests/` |
-| Test inventory | Separates learning specs from capstone specs | `tests/learning/`, `tests/ui/`, `tests/api/`, `tests/ui/capstone/` |
-| Getting started | Gives runnable setup steps | `package.json`, `.env.example` |
-| Commands | Documents real npm scripts | `package.json` |
-| Reports | Shows where generated reports live | `playwright.config.ts`, `reports/` |
-| CI | Explains automated execution | `.github/workflows/playwright.yml` |
+| Overview | Explains what the framework tests | `tests/`, `src/`, [playwright.config.ts](../../playwright.config.ts) |
+| Tech stack | Shows the major tools | [package.json](../../package.json), [tsconfig.json](../../tsconfig.json) |
+| Architecture | Explains how the framework is layered | [src/page-objects/](../../src/page-objects), [src/fixtures/](../../src/fixtures), [src/utils/](../../src/utils), `tests/` |
+| Test inventory | Separates learning specs from capstone specs | [tests/learning/](../../tests/learning), [tests/ui/](../../tests/ui), [tests/api/](../../tests/api), [tests/ui/capstone/](../../tests/ui/capstone) |
+| Getting started | Gives runnable setup steps | [package.json](../../package.json), [.env.example](../../.env.example) |
+| Commands | Documents real npm scripts | [package.json](../../package.json) |
+| Reports | Shows where generated reports live | [playwright.config.ts](../../playwright.config.ts), `reports/` |
+| CI | Explains automated execution | [.github/workflows/playwright.yml](../../.github/workflows/playwright.yml) |
 | Learning path | Connects modules to docs | `docs/module-*` |
 
 ## Truthful Metrics
@@ -59,7 +59,7 @@ This is why the README says "103 logical capstone tests" and "`npm run test:caps
 
 The README should prefer project scripts over raw Playwright commands because scripts are easier for learners to remember.
 
-Important scripts from `package.json` include:
+Important scripts from [package.json](../../package.json) include:
 
 | Script | Purpose |
 |---|---|
@@ -81,9 +81,9 @@ The README should explain why the project can run without a local `.env` file.
 
 The project has:
 
-- `.env.example` as the safe template
-- `.gitignore` rules that keep `.env` files out of Git
-- `dotenv/config` imports in `playwright.config.ts` and `src/utils/test-users.ts`
+- [.env.example](../../.env.example) as the safe template
+- [.gitignore](../../.gitignore) rules that keep `.env` files out of Git
+- `dotenv/config` imports in [playwright.config.ts](../../playwright.config.ts) and [src/utils/test-users.ts](../../src/utils/test-users.ts)
 - fallback values for SauceDemo's public demo URL and users
 
 That means a learner can run the framework immediately, but the framework still demonstrates the correct real-world pattern.
@@ -111,8 +111,8 @@ Common examples:
 
 Module 08 reduces drift by linking claims to files:
 
-- test scripts come from `package.json`
-- report paths come from `playwright.config.ts`
+- test scripts come from [package.json](../../package.json)
+- report paths come from [playwright.config.ts](../../playwright.config.ts)
 - framework structure comes from `src/` and `tests/`
 - module descriptions come from `docs/module-*`
 

@@ -13,7 +13,7 @@ That audience could be:
 
 This repository intentionally skips standalone portfolio/interview template files. Instead, Module 08 focuses on repository packaging that belongs inside the project:
 
-- a professional `README.md`
+- a professional [README.md](../../README.md)
 - clear documentation for how the framework is structured
 - correct commands for tests and reports
 - a final review checklist that keeps claims aligned with implemented code
@@ -63,24 +63,25 @@ The distinction between logical tests and executions is important. A single logi
 
 | File | Status | Purpose |
 |---|---|---|
-| `README.md` | added | Public entry point for installing, running, and understanding the framework |
-| `docs/module-08-portfolio-and-interview-packaging/00-module-overview.md` | added | Explains the purpose and scope of Module 08 |
-| `docs/module-08-portfolio-and-interview-packaging/01-professional-readme.md` | added | Teaches how the README maps to actual project files |
-| `docs/module-08-portfolio-and-interview-packaging/02-github-and-report-packaging.md` | added | Explains badges, CI, reports, generated artifacts, and GitHub presentation |
-| `docs/module-08-portfolio-and-interview-packaging/03-final-framework-review.md` | added | Reviews the completed framework architecture and module progression |
-| `docs/module-08-portfolio-and-interview-packaging/exercises.md` | added | Provides final packaging exercises without asking the learner to duplicate completed work |
+| [README.md](../../README.md) | added | Public entry point for installing, running, and understanding the framework |
+| [docs/module-08-portfolio-and-interview-packaging/00-module-overview.md](./00-module-overview.md) | added | Explains the purpose and scope of Module 08 |
+| [docs/module-08-portfolio-and-interview-packaging/01-professional-readme.md](./01-professional-readme.md) | added | Teaches how the README maps to actual project files |
+| [docs/module-08-portfolio-and-interview-packaging/02-github-and-report-packaging.md](./02-github-and-report-packaging.md) | added | Explains badges, CI, reports, generated artifacts, and GitHub presentation |
+| [docs/module-08-portfolio-and-interview-packaging/03-final-framework-review.md](./03-final-framework-review.md) | added | Reviews the completed framework architecture and module progression |
+| [docs/module-08-portfolio-and-interview-packaging/04-framework-lifecycle-deep-dive.md](./04-framework-lifecycle-deep-dive.md) | added | Explains how to audit, present, and defend the finished framework |
+| [docs/module-08-portfolio-and-interview-packaging/exercises.md](./exercises.md) | added | Provides final packaging exercises without asking the learner to duplicate completed work |
 
 ## What Module 08 Does Not Add
 
 Module 08 does not add new framework features. By this point, the project already contains:
 
-- Playwright configuration in `playwright.config.ts`
-- environment support through `.env.example` and `dotenv`
-- reusable page objects under `src/page-objects/`
-- typed test data under `src/types/` and `src/utils/`
-- custom fixtures under `src/fixtures/`
+- Playwright configuration in [playwright.config.ts](../../playwright.config.ts)
+- environment support through [.env.example](../../.env.example) and `dotenv`
+- reusable page objects under [src/page-objects/](../../src/page-objects)
+- typed test data under [src/types/](../../src/types) and [src/utils/](../../src/utils)
+- custom fixtures under [src/fixtures/](../../src/fixtures)
 - UI, API, advanced, reporting, authenticated, and capstone tests under `tests/`
-- CI configuration under `.github/workflows/playwright.yml`
+- CI configuration under [.github/workflows/playwright.yml](../../.github/workflows/playwright.yml)
 - report generation through Playwright HTML, JSON, JUnit, and Allure
 
 Adding more tests here would blur the learning progression. Module 08 is about explaining and packaging the completed result.
@@ -89,7 +90,7 @@ Adding more tests here would blur the learning progression. Module 08 is about e
 
 Module 08 is complete when:
 
-- `README.md` accurately describes implemented files and scripts
+- [README.md](../../README.md) accurately describes implemented files and scripts
 - Module 08 docs explain packaging with project-specific references
 - no standalone portfolio/interview materials are added
 - `npm run typecheck` passes

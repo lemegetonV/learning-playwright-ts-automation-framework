@@ -71,18 +71,18 @@ Do not leave `<owner>` and `<repo>` placeholders in a final public README. A bro
 
 ## Generated Reports
 
-The reporting configuration lives in `playwright.config.ts`.
+The reporting configuration lives in [playwright.config.ts](../../playwright.config.ts).
 
 The framework writes several report formats:
 
 | Output | Path | Purpose |
 |---|---|---|
-| Playwright HTML | `reports/playwright-html` | interactive local debugging |
-| JSON results | `reports/test-results/results.json` | machine-readable test data |
-| JUnit XML | `reports/test-results/junit.xml` | CI-compatible test summary |
-| Allure raw results | `reports/allure-results` | source data for Allure |
-| Allure static report | `reports/allure-report` | generated Allure HTML report |
-| Artifacts | `reports/test-artifacts` | screenshots, videos, traces, attachments |
+| Playwright HTML | [reports/playwright-html](../../reports/playwright-html) | interactive local debugging |
+| JSON results | [reports/test-results/results.json](../../reports/test-results/results.json) | machine-readable test data |
+| JUnit XML | [reports/test-results/junit.xml](../../reports/test-results/junit.xml) | CI-compatible test summary |
+| Allure raw results | [reports/allure-results](../../reports/allure-results) | source data for Allure |
+| Allure static report | [reports/allure-report](../../reports/allure-report) | generated Allure HTML report |
+| Artifacts | [reports/test-artifacts](../../reports/test-artifacts) | screenshots, videos, traces, attachments |
 
 The raw and generated report folders are intentionally ignored by Git. Reports change on every run and can become large.
 
@@ -150,7 +150,7 @@ This project currently documents report generation and CI artifact upload, which
 
 ## Keeping Generated Files Out Of Git
 
-The `.gitignore` file protects the repository from generated output:
+The [.gitignore](../../.gitignore) file protects the repository from generated output:
 
 ```text
 reports/*
