@@ -37,23 +37,24 @@ The test communicates intent, and the page object owns the UI mechanics.
 
 | File | Status | Purpose |
 |---|---|---|
-| `src/page-objects/BasePage.ts` | added | Shared base class for page objects that need the same `page` storage and navigation helpers |
-| `src/page-objects/LoginPage.ts` | added | Encapsulates SauceDemo login screen locators and actions |
-| `src/page-objects/ProductsPage.ts` | added | Encapsulates product list, sort, cart badge, and product-card actions |
-| `src/page-objects/CartPage.ts` | added | Encapsulates cart item lookup and checkout/continue actions |
-| `src/page-objects/CheckoutPage.ts` | added | Encapsulates checkout form, validation error, and completion actions |
-| `src/types/products.ts` | added | Provides product-name and sort-option types |
-| `src/types/checkout.ts` | added | Provides checkout customer data type |
-| `tests/ui/auth/login.spec.ts` | changed | Rewritten to use `LoginPage` and `ProductsPage` |
-| `tests/ui/products/products.spec.ts` | added | Demonstrates product page object behavior |
-| `tests/ui/cart/cart.spec.ts` | added | Demonstrates cart page object behavior |
-| `tests/ui/checkout/checkout.spec.ts` | added | Demonstrates checkout page object behavior |
+| [src/page-objects/BasePage.ts](../../src/page-objects/BasePage.ts) | added | Shared base class for page objects that need the same `page` storage and navigation helpers |
+| [src/page-objects/LoginPage.ts](../../src/page-objects/LoginPage.ts) | added | Encapsulates SauceDemo login screen locators and actions |
+| [src/page-objects/ProductsPage.ts](../../src/page-objects/ProductsPage.ts) | added | Encapsulates product list, sort, cart badge, and product-card actions |
+| [src/page-objects/CartPage.ts](../../src/page-objects/CartPage.ts) | added | Encapsulates cart item lookup and checkout/continue actions |
+| [src/page-objects/CheckoutPage.ts](../../src/page-objects/CheckoutPage.ts) | added | Encapsulates checkout form, validation error, and completion actions |
+| [src/types/products.ts](../../src/types/products.ts) | added | Provides product-name and sort-option types |
+| [src/types/checkout.ts](../../src/types/checkout.ts) | added | Provides checkout customer data type |
+| [tests/ui/auth/login.spec.ts](../../tests/ui/auth/login.spec.ts) | changed | Rewritten to use `LoginPage` and `ProductsPage` |
+| [tests/ui/products/products.spec.ts](../../tests/ui/products/products.spec.ts) | added | Demonstrates product page object behavior |
+| [tests/ui/cart/cart.spec.ts](../../tests/ui/cart/cart.spec.ts) | added | Demonstrates cart page object behavior |
+| [tests/ui/checkout/checkout.spec.ts](../../tests/ui/checkout/checkout.spec.ts) | added | Demonstrates checkout page object behavior |
+| [04-framework-lifecycle-deep-dive.md](./04-framework-lifecycle-deep-dive.md) | added | Explains the page-object lifecycle and how specs use each class |
 
 Module 03 also reuses Module 02 files:
 
-- `src/utils/test-users.ts`
-- `src/types/test-users.ts`
-- `playwright.config.ts`
+- [src/utils/test-users.ts](../../src/utils/test-users.ts)
+- [src/types/test-users.ts](../../src/types/test-users.ts)
+- [playwright.config.ts](../../playwright.config.ts)
 
 ## Page Object Responsibility
 

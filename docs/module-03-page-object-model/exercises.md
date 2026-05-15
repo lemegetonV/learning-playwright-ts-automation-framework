@@ -4,7 +4,7 @@ These exercises extend the implemented page objects. They do not ask you to recr
 
 ## Exercise 1: Add Another Product Assertion
 
-Extend `tests/ui/products/products.spec.ts` to assert the price for a different product.
+Extend [tests/ui/products/products.spec.ts](../../tests/ui/products/products.spec.ts) to assert the price for a different product.
 
 Hint: Use `productsPage.getProductPrice(productName)` and choose a product from `SauceDemoProductName`.
 

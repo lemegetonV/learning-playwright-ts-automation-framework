@@ -15,7 +15,7 @@ Each class owns one page or page-like area of the app.
 
 ## `BasePage`
 
-`src/page-objects/BasePage.ts` stores shared page access and navigation helpers.
+[src/page-objects/BasePage.ts](../../src/page-objects/BasePage.ts) stores shared page access and navigation helpers.
 
 ```ts
 export abstract class BasePage {
@@ -77,7 +77,7 @@ This is safer than selecting the first "Add to cart" button on the page.
 
 ## Product Types
 
-`src/types/products.ts` defines known product names and sort options.
+[src/types/products.ts](../../src/types/products.ts) defines known product names and sort options.
 
 ```ts
 export type SauceDemoProductName =
@@ -123,7 +123,7 @@ The cart page object does not decide what products should be in the cart. The sp
 - validation error
 - completion header
 
-The customer data shape lives in `src/types/checkout.ts`:
+The customer data shape lives in [src/types/checkout.ts](../../src/types/checkout.ts):
 
 ```ts
 export interface CheckoutCustomer {
@@ -139,14 +139,14 @@ This keeps checkout form data explicit and reusable.
 
 | Spec | Page Objects Used | Behavior |
 |---|---|---|
-| `tests/ui/auth/login.spec.ts` | `LoginPage`, `ProductsPage` | login success, invalid credentials, locked user, clear error |
-| `tests/ui/products/products.spec.ts` | `LoginPage`, `ProductsPage` | product list, add/remove, sort |
-| `tests/ui/cart/cart.spec.ts` | `LoginPage`, `ProductsPage`, `CartPage` | cart item persistence and removal |
-| `tests/ui/checkout/checkout.spec.ts` | all page objects | checkout validation and successful checkout |
+| [tests/ui/auth/login.spec.ts](../../tests/ui/auth/login.spec.ts) | `LoginPage`, `ProductsPage` | login success, invalid credentials, locked user, clear error |
+| [tests/ui/products/products.spec.ts](../../tests/ui/products/products.spec.ts) | `LoginPage`, `ProductsPage` | product list, add/remove, sort |
+| [tests/ui/cart/cart.spec.ts](../../tests/ui/cart/cart.spec.ts) | `LoginPage`, `ProductsPage`, `CartPage` | cart item persistence and removal |
+| [tests/ui/checkout/checkout.spec.ts](../../tests/ui/checkout/checkout.spec.ts) | all page objects | checkout validation and successful checkout |
 
 ## Key Takeaways
 
 - Each page object has a clear ownership boundary.
-- Page objects use types from `src/types/` rather than untyped strings everywhere.
+- Page objects use types from [src/types/](../../src/types) rather than untyped strings everywhere.
 - Specs become shorter because UI mechanics move into classes.
 - The Base Page pattern is present but intentionally small.
