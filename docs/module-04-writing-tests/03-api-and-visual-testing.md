@@ -28,7 +28,7 @@ They are not a replacement for UI tests. API tests cannot prove that a user can 
 
 ## Module 04 API Project
 
-`playwright.config.ts` adds:
+[playwright.config.ts](../../playwright.config.ts) adds:
 
 ```ts
 {
@@ -47,7 +47,7 @@ npm run test:api
 
 ## Response Shape
 
-`tests/api/jsonplaceholder.spec.ts` defines:
+[tests/api/jsonplaceholder.spec.ts](../../tests/api/jsonplaceholder.spec.ts) defines:
 
 ```ts
 interface JsonPlaceholderPost {
@@ -75,6 +75,6 @@ Visual testing is powerful, but it needs stable baselines and careful review. It
 
 Read:
 
-- `tests/api/jsonplaceholder.spec.ts`
-- `playwright.config.ts`
-- `package.json`
+- [tests/api/jsonplaceholder.spec.ts](../../tests/api/jsonplaceholder.spec.ts)
+- [playwright.config.ts](../../playwright.config.ts)
+- [package.json](../../package.json)

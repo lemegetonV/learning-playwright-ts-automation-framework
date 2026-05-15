@@ -12,7 +12,7 @@ Data-driven testing separates:
 
 ## Inline Data
 
-`tests/ui/auth/login-data-driven.spec.ts` uses inline cases:
+[tests/ui/auth/login-data-driven.spec.ts](../../tests/ui/auth/login-data-driven.spec.ts) uses inline cases:
 
 ```ts
 const invalidLoginCases = [
@@ -39,7 +39,7 @@ This keeps each input visible while avoiding repeated test bodies.
 
 ## JSON Data
 
-`test-data/saucedemo-products.json` stores product expectations:
+[test-data/saucedemo-products.json](../../test-data/saucedemo-products.json) stores product expectations:
 
 ```json
 [
@@ -51,7 +51,7 @@ This keeps each input visible while avoiding repeated test bodies.
 ]
 ```
 
-`tests/ui/products/products-data.spec.ts` imports the JSON and validates product prices/add-to-cart behavior.
+[tests/ui/products/products-data.spec.ts](../../tests/ui/products/products-data.spec.ts) imports the JSON and validates product prices/add-to-cart behavior.
 
 Use JSON when data is:
 
@@ -101,6 +101,6 @@ When generated tests fail, the title should identify the data case.
 
 Read:
 
-- `tests/ui/auth/login-data-driven.spec.ts`
-- `tests/ui/products/products-data.spec.ts`
-- `test-data/saucedemo-products.json`
+- [tests/ui/auth/login-data-driven.spec.ts](../../tests/ui/auth/login-data-driven.spec.ts)
+- [tests/ui/products/products-data.spec.ts](../../tests/ui/products/products-data.spec.ts)
+- [test-data/saucedemo-products.json](../../test-data/saucedemo-products.json)

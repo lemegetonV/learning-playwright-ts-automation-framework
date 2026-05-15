@@ -13,7 +13,7 @@ This module adds:
 - data-driven UI tests
 - JSON test data under `test-data/`
 - first Playwright API tests using the `request` fixture
-- an `api` project in `playwright.config.ts`
+- an `api` project in [playwright.config.ts](../../playwright.config.ts)
 
 ## Learning Progression
 
@@ -29,14 +29,15 @@ flowchart LR
 
 | File | Status | Purpose |
 |---|---|---|
-| `playwright.config.ts` | changed | Adds an `api` project and prevents browser projects from running API specs |
-| `package.json` | changed | Adds `test:api` and `test:smoke` scripts |
-| `tests/ui/auth/login.spec.ts` | changed | Adds smoke tagging and `test.step` structure |
-| `tests/ui/auth/login-data-driven.spec.ts` | added | Demonstrates data-driven login testing |
-| `tests/ui/products/products.spec.ts` | changed | Adds clearer AAA/test step organization |
-| `tests/ui/products/products-data.spec.ts` | added | Demonstrates JSON-backed product tests |
-| `tests/api/jsonplaceholder.spec.ts` | added | Introduces Playwright API testing with `request` |
-| `test-data/saucedemo-products.json` | added | External product data for data-driven tests |
+| [playwright.config.ts](../../playwright.config.ts) | changed | Adds an `api` project and prevents browser projects from running API specs |
+| [package.json](../../package.json) | changed | Adds `test:api` and `test:smoke` scripts |
+| [tests/ui/auth/login.spec.ts](../../tests/ui/auth/login.spec.ts) | changed | Adds smoke tagging and `test.step` structure |
+| [tests/ui/auth/login-data-driven.spec.ts](../../tests/ui/auth/login-data-driven.spec.ts) | added | Demonstrates data-driven login testing |
+| [tests/ui/products/products.spec.ts](../../tests/ui/products/products.spec.ts) | changed | Adds clearer AAA/test step organization |
+| [tests/ui/products/products-data.spec.ts](../../tests/ui/products/products-data.spec.ts) | added | Demonstrates JSON-backed product tests |
+| [tests/api/jsonplaceholder.spec.ts](../../tests/api/jsonplaceholder.spec.ts) | added | Introduces Playwright API testing with `request` |
+| [test-data/saucedemo-products.json](../../test-data/saucedemo-products.json) | added | External product data for data-driven tests |
+| [05-framework-lifecycle-deep-dive.md](./05-framework-lifecycle-deep-dive.md) | added | Explains structured UI/API test flow, data-driven generation, tags, and steps |
 
 ## Why API Testing Appears In A UI Course
 

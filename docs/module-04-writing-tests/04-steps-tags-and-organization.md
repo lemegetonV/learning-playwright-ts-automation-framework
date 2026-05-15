@@ -73,11 +73,11 @@ When a doc mentions code, it should point to code that exists in the same module
 
 Module 04 references:
 
-- `tests/ui/auth/login.spec.ts`
-- `tests/ui/auth/login-data-driven.spec.ts`
-- `tests/ui/products/products.spec.ts`
-- `tests/ui/products/products-data.spec.ts`
-- `tests/api/jsonplaceholder.spec.ts`
-- `test-data/saucedemo-products.json`
+- [tests/ui/auth/login.spec.ts](../../tests/ui/auth/login.spec.ts)
+- [tests/ui/auth/login-data-driven.spec.ts](../../tests/ui/auth/login-data-driven.spec.ts)
+- [tests/ui/products/products.spec.ts](../../tests/ui/products/products.spec.ts)
+- [tests/ui/products/products-data.spec.ts](../../tests/ui/products/products-data.spec.ts)
+- [tests/api/jsonplaceholder.spec.ts](../../tests/api/jsonplaceholder.spec.ts)
+- [test-data/saucedemo-products.json](../../test-data/saucedemo-products.json)
 
 Future-module files are not referenced as if they already exist.

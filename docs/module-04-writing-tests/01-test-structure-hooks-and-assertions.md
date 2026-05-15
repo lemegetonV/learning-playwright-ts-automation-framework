@@ -105,7 +105,7 @@ Use tags sparingly. A tag should mean something operational, such as "this is a 
 
 Module 04 examples are implemented in:
 
-- `tests/ui/auth/login.spec.ts`
-- `tests/ui/products/products.spec.ts`
+- [tests/ui/auth/login.spec.ts](../../tests/ui/auth/login.spec.ts)
+- [tests/ui/products/products.spec.ts](../../tests/ui/products/products.spec.ts)
 
 Read those files beside this doc. The goal is not just to see that tests pass, but to notice how setup, action, and assertion are separated.
