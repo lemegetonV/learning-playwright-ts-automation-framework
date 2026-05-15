@@ -12,7 +12,7 @@ Playwright has dedicated APIs for each.
 
 ## File Uploads
 
-`tests/advanced/file-handling.spec.ts` demonstrates a real file upload:
+[tests/advanced/file-handling.spec.ts](../../tests/advanced/file-handling.spec.ts) demonstrates a real file upload:
 
 ```ts
 const uploadFilePath = path.join(process.cwd(), 'test-data', 'upload-sample.txt');
@@ -93,6 +93,6 @@ This is acceptable for feature-learning tests. SauceDemo remains the main applic
 
 Read:
 
-- `tests/advanced/file-handling.spec.ts`
-- `tests/advanced/iframes-dialogs.spec.ts`
-- `test-data/upload-sample.txt`
+- [tests/advanced/file-handling.spec.ts](../../tests/advanced/file-handling.spec.ts)
+- [tests/advanced/iframes-dialogs.spec.ts](../../tests/advanced/iframes-dialogs.spec.ts)
+- [test-data/upload-sample.txt](../../test-data/upload-sample.txt)

@@ -76,7 +76,7 @@ These scripts teach how execution can be shaped without changing test code.
 
 ## Projects For Advanced Tests
 
-`advanced-chromium` runs only `tests/advanced`.
+`advanced-chromium` runs only [tests/advanced](../../tests/advanced).
 
 Browser projects ignore advanced/auth/setup tests so the normal suite stays focused on application workflows.
 
@@ -97,6 +97,6 @@ In CI, shards can run on separate machines to reduce total time. Locally, shardi
 
 Read:
 
-- `tests/advanced/network-interception.spec.ts`
-- `playwright.config.ts`
-- `package.json`
+- [tests/advanced/network-interception.spec.ts](../../tests/advanced/network-interception.spec.ts)
+- [playwright.config.ts](../../playwright.config.ts)
+- [package.json](../../package.json)

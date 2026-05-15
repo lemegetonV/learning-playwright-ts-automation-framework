@@ -27,17 +27,18 @@ flowchart TD
 
 | File | Status | Purpose |
 |---|---|---|
-| `src/fixtures/saucedemo-fixtures.ts` | added | Custom fixtures for login page, logged-in products page, and pre-filled cart |
-| `tests/ui/products/products-fixtures.spec.ts` | added | Demonstrates fixture-provided logged-in product state |
-| `tests/ui/cart/cart-fixtures.spec.ts` | added | Demonstrates fixture-provided cart state |
-| `tests/setup/auth.setup.ts` | added | Logs in once and saves storage state |
-| `tests/ui/authenticated/authenticated-products.spec.ts` | added | Uses saved auth state without UI login |
-| `tests/advanced/file-handling.spec.ts` | added | Upload, in-memory upload, and download examples |
-| `tests/advanced/iframes-dialogs.spec.ts` | added | Frame locator and dialog handling examples |
-| `tests/advanced/network-interception.spec.ts` | added | Mock, block, and observe network requests |
-| `test-data/upload-sample.txt` | added | File upload fixture data |
-| `playwright.config.ts` | changed | Adds advanced/auth projects and excludes advanced tests from browser smoke runs |
-| `package.json` | changed | Adds advanced/auth/parallel/shard scripts |
+| [src/fixtures/saucedemo-fixtures.ts](../../src/fixtures/saucedemo-fixtures.ts) | added | Custom fixtures for login page, logged-in products page, and pre-filled cart |
+| [tests/ui/products/products-fixtures.spec.ts](../../tests/ui/products/products-fixtures.spec.ts) | added | Demonstrates fixture-provided logged-in product state |
+| [tests/ui/cart/cart-fixtures.spec.ts](../../tests/ui/cart/cart-fixtures.spec.ts) | added | Demonstrates fixture-provided cart state |
+| [tests/setup/auth.setup.ts](../../tests/setup/auth.setup.ts) | added | Logs in once and saves storage state |
+| [tests/ui/authenticated/authenticated-products.spec.ts](../../tests/ui/authenticated/authenticated-products.spec.ts) | added | Uses saved auth state without UI login |
+| [tests/advanced/file-handling.spec.ts](../../tests/advanced/file-handling.spec.ts) | added | Upload, in-memory upload, and download examples |
+| [tests/advanced/iframes-dialogs.spec.ts](../../tests/advanced/iframes-dialogs.spec.ts) | added | Frame locator and dialog handling examples |
+| [tests/advanced/network-interception.spec.ts](../../tests/advanced/network-interception.spec.ts) | added | Mock, block, and observe network requests |
+| [test-data/upload-sample.txt](../../test-data/upload-sample.txt) | added | File upload fixture data |
+| [playwright.config.ts](../../playwright.config.ts) | changed | Adds advanced/auth projects and excludes advanced tests from browser smoke runs |
+| [package.json](../../package.json) | changed | Adds advanced/auth/parallel/shard scripts |
+| [04-framework-lifecycle-deep-dive.md](./04-framework-lifecycle-deep-dive.md) | added | Explains fixture setup, auth-state reuse, advanced browser events, routing, and execution strategy |
 
 ## Why These Features Are Advanced
 

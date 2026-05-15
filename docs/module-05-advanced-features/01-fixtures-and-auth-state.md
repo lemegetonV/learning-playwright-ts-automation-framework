@@ -32,7 +32,7 @@ The key line is `await use(value)`. Code before it is setup. Code after it is te
 
 ## Module 05 Fixture File
 
-`src/fixtures/saucedemo-fixtures.ts` extends Playwright's base test:
+[src/fixtures/saucedemo-fixtures.ts](../../src/fixtures/saucedemo-fixtures.ts) extends Playwright's base test:
 
 ```ts
 export const test = base.extend<SauceDemoFixtures>({
@@ -69,7 +69,7 @@ Future optimization may introduce worker-scoped fixtures, but only when the suit
 
 Fixtures reduce setup code, but they still perform UI login before each test. Saved auth state solves a different problem: avoid repeated login when the test does not care about login behavior.
 
-`tests/setup/auth.setup.ts` logs in once:
+[tests/setup/auth.setup.ts](../../tests/setup/auth.setup.ts) logs in once:
 
 ```ts
 await loginPage.goto();
@@ -88,7 +88,7 @@ That file is ignored because it may contain session cookies in real projects.
 
 ## Auth Project Dependencies
 
-`playwright.config.ts` adds:
+[playwright.config.ts](../../playwright.config.ts) adds:
 
 ```ts
 {
@@ -130,8 +130,8 @@ Use saved auth when:
 
 Read:
 
-- `src/fixtures/saucedemo-fixtures.ts`
-- `tests/ui/products/products-fixtures.spec.ts`
-- `tests/ui/cart/cart-fixtures.spec.ts`
-- `tests/setup/auth.setup.ts`
-- `tests/ui/authenticated/authenticated-products.spec.ts`
+- [src/fixtures/saucedemo-fixtures.ts](../../src/fixtures/saucedemo-fixtures.ts)
+- [tests/ui/products/products-fixtures.spec.ts](../../tests/ui/products/products-fixtures.spec.ts)
+- [tests/ui/cart/cart-fixtures.spec.ts](../../tests/ui/cart/cart-fixtures.spec.ts)
+- [tests/setup/auth.setup.ts](../../tests/setup/auth.setup.ts)
+- [tests/ui/authenticated/authenticated-products.spec.ts](../../tests/ui/authenticated/authenticated-products.spec.ts)

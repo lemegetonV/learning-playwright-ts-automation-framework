@@ -12,7 +12,7 @@ Hint: Model it after `cartWithProducts`, but keep the setup smaller.
 
 Create an authenticated test that uses saved auth state, opens the cart page, and verifies the cart title.
 
-Hint: Put it under `tests/ui/authenticated/` so the `authenticated-chromium` project picks it up.
+Hint: Put it under [tests/ui/authenticated/](../../tests/ui/authenticated) so the `authenticated-chromium` project picks it up.
 
 ## Exercise 3: Add A Download Content Check
 
