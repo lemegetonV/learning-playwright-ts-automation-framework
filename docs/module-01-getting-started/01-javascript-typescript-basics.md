@@ -317,7 +317,7 @@ Use a simple rule in this repo:
 - `type` is fine for small data shapes and unions
 - `interface` is fine for named object contracts that classes or helpers may consume
 
-Later modules use shared types in `src/types/` so test data and page objects agree on the same shape.
+Later modules use shared types in [src/types/](../../src/types) so test data and page objects agree on the same shape.
 
 ## Union Types
 

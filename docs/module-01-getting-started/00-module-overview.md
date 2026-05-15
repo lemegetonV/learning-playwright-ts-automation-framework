@@ -39,13 +39,13 @@ The order matters. A beginner who jumps straight into `await page.getByRole(...)
 
 | File | Purpose | Why It Exists Now |
 |---|---|---|
-| `package.json` | npm manifest and test scripts | Defines this as a Node.js project and records Playwright dependencies |
-| `package-lock.json` | exact dependency lockfile | Keeps installs repeatable across machines |
-| `tsconfig.json` | TypeScript compiler settings | Enables strict enough checking for a learning framework |
-| `playwright.config.ts` | Playwright runner configuration | Defines test location, browser behavior, reports, retries, and base URL |
-| `.gitignore` | ignored generated files | Keeps `node_modules`, reports, and secrets out of commits |
-| `tests/learning/first-run.spec.ts` | first low-risk learning spec | Demonstrates `test`, `page`, navigation, and assertions |
-| `tests/ui/auth/login.spec.ts` | first real target spec | Exercises SauceDemo login success and login failure |
+| [package.json](../../package.json) | npm manifest and test scripts | Defines this as a Node.js project and records Playwright dependencies |
+| [package-lock.json](../../package-lock.json) | exact dependency lockfile | Keeps installs repeatable across machines |
+| [tsconfig.json](../../tsconfig.json) | TypeScript compiler settings | Enables strict enough checking for a learning framework |
+| [playwright.config.ts](../../playwright.config.ts) | Playwright runner configuration | Defines test location, browser behavior, reports, retries, and base URL |
+| [.gitignore](../../.gitignore) | ignored generated files | Keeps `node_modules`, reports, and secrets out of commits |
+| [tests/learning/first-run.spec.ts](../../tests/learning/first-run.spec.ts) | first low-risk learning spec | Demonstrates `test`, `page`, navigation, and assertions |
+| [tests/ui/auth/login.spec.ts](../../tests/ui/auth/login.spec.ts) | first real target spec | Exercises SauceDemo login success and login failure |
 | `docs/module-01-getting-started/*` | learning notes and exercises | Teaches the concepts before the framework grows |
 
 These files are intentionally small. Module 01 is not the framework architecture module. Its job is to make the first feedback loop clear:
@@ -101,12 +101,13 @@ This repo intentionally uses:
 
 | Topic | Covered In | Connected Code |
 |---|---|---|
-| Node.js and npm | `04-project-setup-and-first-tests.md` | `package.json`, `package-lock.json` |
-| TypeScript basics | `01-javascript-typescript-basics.md` | all `.ts` files |
-| Functions and imports | `02-control-flow-functions-and-modules.md` | `tests/**/*.spec.ts` imports from `@playwright/test` |
-| Async browser flow | `03-async-await-and-playwright-flow.md` | every `await page...` call |
-| Playwright primitives | `05-core-playwright-primitives.md` | `test`, `expect`, `page`, locators |
-| First real test | `06-first-saucedemo-test.md` | `tests/ui/auth/login.spec.ts` |
+| Node.js and npm | [04-project-setup-and-first-tests.md](./04-project-setup-and-first-tests.md) | [package.json](../../package.json), [package-lock.json](../../package-lock.json) |
+| TypeScript basics | [01-javascript-typescript-basics.md](./01-javascript-typescript-basics.md) | all `.ts` files |
+| Functions and imports | [02-control-flow-functions-and-modules.md](./02-control-flow-functions-and-modules.md) | `tests/**/*.spec.ts` imports from `@playwright/test` |
+| Async browser flow | [03-async-await-and-playwright-flow.md](./03-async-await-and-playwright-flow.md) | every `await page...` call |
+| Playwright primitives | [05-core-playwright-primitives.md](./05-core-playwright-primitives.md) | `test`, `expect`, `page`, locators |
+| First real test | [06-first-saucedemo-test.md](./06-first-saucedemo-test.md) | [tests/ui/auth/login.spec.ts](../../tests/ui/auth/login.spec.ts) |
+| Module lifecycle deep dive | [07-framework-lifecycle-deep-dive.md](./07-framework-lifecycle-deep-dive.md) | [playwright.config.ts](../../playwright.config.ts), [tests/learning/first-run.spec.ts](../../tests/learning/first-run.spec.ts), [tests/ui/auth/login.spec.ts](../../tests/ui/auth/login.spec.ts) |
 
 ## What Is Not Added Yet
 

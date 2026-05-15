@@ -25,7 +25,7 @@ The first spec covers both branches:
 
 ## Why Keep The Test Direct In Module 01
 
-The login test in `tests/ui/auth/login.spec.ts` uses raw Playwright calls:
+The login test in [tests/ui/auth/login.spec.ts](../../tests/ui/auth/login.spec.ts) uses raw Playwright calls:
 
 ```ts
 await page.getByPlaceholder('Username').fill('standard_user');

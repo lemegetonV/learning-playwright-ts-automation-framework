@@ -18,7 +18,7 @@ For this project, Node.js 18 or newer is expected.
 npm has two jobs here:
 
 - install packages such as `@playwright/test` and `typescript`
-- run scripts defined in `package.json`
+- run scripts defined in [package.json](../../package.json)
 
 When you run:
 
@@ -26,7 +26,7 @@ When you run:
 npm install
 ```
 
-npm reads `package.json`, downloads dependencies into `node_modules`, and records exact versions in `package-lock.json`.
+npm reads [package.json](../../package.json), downloads dependencies into `node_modules`, and records exact versions in [package-lock.json](../../package-lock.json).
 
 When you run:
 
@@ -34,7 +34,7 @@ When you run:
 npm test
 ```
 
-npm looks inside `package.json` and runs the command assigned to the `test` script.
+npm looks inside [package.json](../../package.json) and runs the command assigned to the `test` script.
 
 ## Files Created In Module 01
 
@@ -49,7 +49,7 @@ flowchart TD
   L["tests/ui/auth/login.spec.ts"] --> M["first SauceDemo spec"]
 ```
 
-## `package.json`
+## [package.json](../../package.json)
 
 This file declares the project as a Node.js project.
 
@@ -72,7 +72,7 @@ Key sections:
 
 The scripts are deliberately small in Module 01. Module 02 expands scripts after the project has environment config and a clearer folder structure.
 
-## `tsconfig.json`
+## [tsconfig.json](../../tsconfig.json)
 
 TypeScript settings live here. The important Module 01 idea is not every individual compiler option. It is that TypeScript checks the project before runtime.
 
@@ -84,7 +84,7 @@ npm run typecheck
 
 should pass before a module is considered healthy.
 
-## `playwright.config.ts`
+## [playwright.config.ts](../../playwright.config.ts)
 
 This file configures the Playwright test runner.
 
@@ -112,7 +112,7 @@ That small decision becomes more important in Module 02 when environment configu
 
 ## First Learning Spec
 
-`tests/learning/first-run.spec.ts` exists to prove the runner works before touching a business flow.
+[tests/learning/first-run.spec.ts](../../tests/learning/first-run.spec.ts) exists to prove the runner works before touching a business flow.
 
 It demonstrates:
 
@@ -125,7 +125,7 @@ This is lower risk than starting immediately with a multi-step login flow.
 
 ## First Real Spec
 
-`tests/ui/auth/login.spec.ts` targets SauceDemo directly.
+[tests/ui/auth/login.spec.ts](../../tests/ui/auth/login.spec.ts) targets SauceDemo directly.
 
 It covers:
 
@@ -184,8 +184,8 @@ Useful beginner debugging questions:
 
 ## Key Takeaways
 
-- `package.json` defines commands and dependencies.
-- `package-lock.json` keeps dependency versions repeatable.
-- `tsconfig.json` makes TypeScript check the code.
-- `playwright.config.ts` controls how tests run.
+- [package.json](../../package.json) defines commands and dependencies.
+- [package-lock.json](../../package-lock.json) keeps dependency versions repeatable.
+- [tsconfig.json](../../tsconfig.json) makes TypeScript check the code.
+- [playwright.config.ts](../../playwright.config.ts) controls how tests run.
 - Module 01 keeps the config small so the first test feedback loop is easy to reason about.

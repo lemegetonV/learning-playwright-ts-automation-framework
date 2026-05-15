@@ -4,7 +4,7 @@ These exercises reinforce the code that exists at the Module 01 checkpoint. They
 
 ## Exercise 1: Explain The First Learning Spec
 
-Open `tests/learning/first-run.spec.ts`.
+Open [tests/learning/first-run.spec.ts](../../tests/learning/first-run.spec.ts).
 
 Write a short note explaining:
 
@@ -13,11 +13,11 @@ Write a short note explaining:
 - why `await page.goto('/')` works with the configured `baseURL`
 - what the assertion proves
 
-Hint: Use `03-async-await-and-playwright-flow.md` and `05-core-playwright-primitives.md`.
+Hint: Use [03-async-await-and-playwright-flow.md](./03-async-await-and-playwright-flow.md) and [05-core-playwright-primitives.md](./05-core-playwright-primitives.md).
 
 ## Exercise 2: Strengthen The Successful Login Test
 
-Open `tests/ui/auth/login.spec.ts`.
+Open [tests/ui/auth/login.spec.ts](../../tests/ui/auth/login.spec.ts).
 
 Add one extra assertion to the successful login test that proves the inventory page is usable, not only loaded.
 
